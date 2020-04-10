@@ -658,4 +658,44 @@ class AdminController extends Controller
 
         return view('admin.seed_sampling', $data);
     }
+
+    public funtion saveSeedSampling(Request $request){
+        $data = array{
+            'request_no' => $request->request_no,
+            'crop' => $request->crop,
+            'variety' => $request->variety,
+            'source' => $request->source,
+            'lot_no' => $request->lot_no,
+            'weight_of_seed_lot' => $request->weight_of_seed_lot,
+            'no_of_bags' => $request->no_of_bags,
+            'date_harvested' => $request->date_harvested,
+            'container' => $request->container,
+            'date_of_application' => $request->date_of_application,
+            'moisture_content' => $request->moisture_content,
+            'physical_purity' => $request->physical_purity,
+            'germination' => $request->germination,
+            'varietal_purity' => $request->varietal_purity,
+            'seed_health' => $request->seed_health,
+            'ttc' => $request->ttc,
+            'others' => $request->others,
+            'fname' => $request->fname,
+            'mname' => $request->mname,
+            'lname' => $request->lname,
+            'ename' => $request->ename,
+            'name_of_company' => $request->name_of_company,
+            'address' => $request->address,
+            'purpose' => $request->purpose,
+            'remarks' => $request->remarks,
+            'created_by' => Auth::user()->name,
+            'updated_by' => isset($request->id) ? Auth::user()->name : NULL,
+            'status' => 1
+        };
+        $res = SeedSampling::updateOrCreate{['id' => $request->id], $data};
+
+        if($res){
+            return redirect('/admin-seed-sampling')->with('message','success');
+        } else {
+            return redirect()->back()->with('message','error');
+        }
+    }
 }

@@ -166,7 +166,7 @@
                                                 <div class="input-group-addon">
                                                     <i class="fa fa-calendar"></i>
                                                 </div>
-                                                <input type="text" class="form-control pull-right" name="date_of_applciation" id="datepicker">
+                                                <input type="text" class="form-control pull-right" name="date_of_application" id="datepicker">
                                             </div>
                                         </div>
                                     </div>
@@ -384,7 +384,7 @@
                                                 <div class="input-group-addon">
                                                     <i class="fa fa-calendar"></i>
                                                 </div>
-                                                <input type="text" class="form-control pull-right" name="date_of_applciation" id="datepicker">
+                                                <input type="text" class="form-control pull-right" name="date_of_application" id="datepicker">
                                             </div>
                                         </div>
                                     </div>

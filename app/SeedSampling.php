@@ -16,7 +16,7 @@ class SeedSampling extends Model
         'no_of_bags',
         'date_harvested',
         'container',
-        'date_of_applciation',
+        'date_of_application',
         'moisture_content',
         'physical_purity',
         'germination',
@@ -32,6 +32,8 @@ class SeedSampling extends Model
         'address',
         'purpose',
         'remarks',
-        'status',
+        'created_by',
+        'updated_by',
+        'status'
     ];
 }
