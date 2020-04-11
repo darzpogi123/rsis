@@ -183,7 +183,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        
+
         <li class="{{ strpos(Request::url(), 'home') == true ? 'active' : '' }}">
           <a href="{{ url('/') }}">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
@@ -229,7 +229,7 @@
             <div class="pull-right hidden-xs">
               <b>Version</b> 1.0.1
             </div>
-            <strong>Copyright &copy; 2019 <a href="#">Senior Citizen Record Management</a>.</strong> All rights
+            <strong>Copyright &copy; 2019 <a href="#">Rice Seed Info System</a>.</strong> All rights
             reserved.
         </footer>
 

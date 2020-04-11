@@ -49,7 +49,9 @@ Route::get('/admin-edit-user/{id}', 'AdminController@editUser');
 Route::post('/change-password', 'AdminController@changeUserPassword');
 
 /* DataTables */
-Route::get('/admin-get-records', 'AdminController@getRecordsData');
+// Route::get('/admin-get-records', 'AdminController@getRecordsData');
+Route::get('/admin-get-seed-sampling', 'AdminController@getRecordsData');
+
 
 // Seed Sampling
 

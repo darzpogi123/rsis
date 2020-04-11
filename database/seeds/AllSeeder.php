@@ -12,9 +12,7 @@ class AllSeeder extends Seeder
     public function run()
     {
         $this->call([
-            UserSeeder::class,
-            BarangaySeeder::class,
-            CivilStatusSeeder::class
+            UserSeeder::class
         ]);
     }
 }

@@ -8,7 +8,7 @@
         </a>
 
         <ol class="breadcrumb">
-           
+
             <li><a href="{{ url('/home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Seed Sampling</li>
         </ol>
@@ -84,7 +84,7 @@
                         @csrf
                         <div class="modal-body">
                             <div class="row">
-                                
+
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="">Request No. <span style="color:red;">*</span></label>
@@ -120,8 +120,8 @@
                                             <input type="text" style="text-transform: capitalize;" name="source" id="source" class="form-control" placeholder="Source">
                                         </div>
                                     </div>
-                                
-                            
+
+
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="">Lot No. <span style="color:red;">*</span></label>
@@ -151,8 +151,8 @@
                                             </div>
                                         </div>
                                     </div>
-                            
-                                
+
+
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label>Kind of Container <span style="color:red;">*</span></label>
@@ -170,7 +170,7 @@
                                             </div>
                                         </div>
                                     </div>
-                              
+
                             </div>
                             <hr>
                             <h4><b><i>Analysis</i></b></h4>
@@ -217,7 +217,7 @@
                                             <input type="text" name="others" id="others" required class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
                                         </div>
                                     </div>
-                                    
+
                             </div>
                             <hr>
                             <h4><b><i>Sampled by:</i></b></h4>
@@ -246,7 +246,7 @@
                                             <input type="text" name="ename" id="ename" required class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="">Name&nbspof&nbspCompany/President/General&nbspManager <span style="color:red;">*</span></label>
@@ -302,7 +302,7 @@
                         @csrf
                         <div class="modal-body">
                             <div class="row">
-                                
+
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="">Request No. <span style="color:red;">*</span></label>
@@ -338,8 +338,8 @@
                                             <input type="text" style="text-transform: capitalize;" name="source" id="source" class="form-control" placeholder="Source">
                                         </div>
                                     </div>
-                                
-                            
+
+
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="">Lot No. <span style="color:red;">*</span></label>
@@ -369,8 +369,8 @@
                                             </div>
                                         </div>
                                     </div>
-                            
-                                
+
+
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label>Kind of Container <span style="color:red;">*</span></label>
@@ -388,7 +388,7 @@
                                             </div>
                                         </div>
                                     </div>
-                              
+
                             </div>
                             <hr>
                             <h4><b><i>Analysis</i></b></h4>
@@ -435,7 +435,7 @@
                                             <input type="text" name="others" id="others" required class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
                                         </div>
                                     </div>
-                                    
+
                             </div>
                             <hr>
                             <h4><b><i>Sampled by:</i></b></h4>
@@ -464,7 +464,7 @@
                                             <input type="text" name="ename" id="ename" required class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="">Name&nbspof&nbspCompany/President/General&nbspManager <span style="color:red;">*</span></label>
@@ -691,16 +691,16 @@
         }); /* View Button */
 
         /* get Age */
-        function getAge(dateString) {
-            var today = new Date();
-            var birthDate = new Date(dateString);
-            var age = today.getFullYear() - birthDate.getFullYear();
-            var m = today.getMonth() - birthDate.getMonth();
-            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-                age--;
-            }
-            return age;
-        }
+        // function getAge(dateString) {
+        //     var today = new Date();
+        //     var birthDate = new Date(dateString);
+        //     var age = today.getFullYear() - birthDate.getFullYear();
+        //     var m = today.getMonth() - birthDate.getMonth();
+        //     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        //         age--;
+        //     }
+        //     return age;
+        // }
 
         /* To Capitalized string */
         function capitalized(txt)
