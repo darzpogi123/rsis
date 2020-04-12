@@ -8,6 +8,7 @@ class SeedSampling extends Model
 {
     protected $fillable = [
         'request_no',
+        'lab_no',
         'crop',
         'variety',
         'source',

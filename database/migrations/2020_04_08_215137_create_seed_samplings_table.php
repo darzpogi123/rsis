@@ -16,6 +16,7 @@ class CreateSeedSamplingsTable extends Migration
         Schema::create('seed_samplings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('request_no')->nullable()->default(null);
+            $table->string('lab_no')->nullable()->default(null);
             $table->string('crop')->nullable()->default(null);
             $table->string('variety')->nullable()->default(null);
             $table->string('source')->nullable()->default(null);

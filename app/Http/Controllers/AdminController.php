@@ -77,34 +77,27 @@ class AdminController extends Controller
 
     public function getRecordsData()
     {
-        if (Auth::user()->user_type != 1) {
-            $user_brgy = UserProfile::where('user_id', Auth::user()->id)->select('user_brgy')->pluck('user_brgy');
-            $records = DB::table('seed')
-                ->where(['status' => 1, 'barangay' => $user_brgy[0]])
-                ->select([
-                    'id',
-                    'fname',
-                    'mname',
-                    'lname',
-                    'ename',
-                    'birthdate',
-                    'gender',
-                    'unique_id_num'
-                ]);
-        } else {
-            $records = DB::table('records')
-                ->where('status', 1)
-                ->select([
-                    'id',
-                    'fname',
-                    'mname',
-                    'lname',
-                    'ename',
-                    'birthdate',
-                    'gender',
-                    'unique_id_num'
-                ]);
-        }
+
+        $records = DB::table('seed_samplings')
+            ->where('status', 1)
+            ->select([
+                'id',
+                'lab_no',
+                'crop',
+                'variety',
+                'lot_no',
+                'no_of_bags',
+                'date_harvested',
+                'container',
+                'moisture_content',
+                'physical_purity',
+                'germination',
+                'fname',
+                'mname',
+                'lname',
+                'ename'
+            ]);
+
 
         return Datatables::of($records)
             ->addColumn('fullname', function ($records) {
@@ -113,9 +106,6 @@ class AdminController extends Controller
             })
             ->addColumn('action', function ($records) {
                 return '<a href="' . App::make("url")->to("/admin-edit-record/" . $records->id) . '" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> </a>&nbsp;<a id="btn-view" data-id="' . $records->id . '" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> </a>&nbsp;<a href="#" id="btn-del" data-id="' . $records->id . '" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i> </a>';
-            })
-            ->editColumn('birthdate', function ($records) {
-                return $records->birthdate ? date_diff(date_create($records->birthdate), date_create('today'))->y : '';
             })
             ->make(true);
     }

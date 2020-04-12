@@ -57,7 +57,7 @@
                             <th>Physical Purity</th>
                             <th>Moisture</th>
                             <th>Germination</th>
-                            <th>Created by</th>
+
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -89,6 +89,12 @@
                                         <div class="form-group">
                                             <label for="">Request No. <span style="color:red;">*</span></label>
                                             <input type="text" name="request_no" id="request_no" required class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="">Lab No. <span style="color:red;">*</span></label>
+                                            <input type="text" style="text-transform: capitalize;" name="lab_no" id="lab_no" class="form-control" placeholder="ex. 1023">
                                         </div>
                                     </div>
                                     <div class="col-md-3">
@@ -611,22 +617,19 @@
         $('#records_tbl').DataTable({
             processing: true,
             serverSide: true,
-            ajax: "{{url('/admin-get-records')}}",
+            ajax: "{{url('/admin-get-seed-sampling')}}",
             columns: [
-                { data: 'unique_id_num', name: 'id' },
+                { data: 'id', name: 'id' },
                 { data: 'fullname', name: 'name' },
-                { data: 'birthdate', name: 'age' },
-                { data: 'gender', name: 'gender' },
-                { data: 'gender', name: 'gender' },
-                { data: 'gender', name: 'gender' },
-                { data: 'gender', name: 'gender' },
-                { data: 'gender', name: 'gender' },
-                { data: 'gender', name: 'gender' },
-                { data: 'gender', name: 'gender' },
-                { data: 'gender', name: 'gender' },
-                { data: 'createdby', name: 'gender' },
-
-
+                { data: 'lab_no', name: 'lab_no' },
+                { data: 'crop', name: 'crop' },
+                { data: 'variety', name: 'variety' },
+                { data: 'lot_no', name: 'lot_no' },
+                { data: 'date_harvested', name: 'date_harvested' },
+                { data: 'container', name: 'container' },
+                { data: 'physical_purity', name: 'physical_purity' },
+                { data: 'moisture_content', name: 'moisture_content' },
+                { data: 'germination', name: 'germination' },
                 { data: 'action', name: 'action', className: 'text-center' }
             ]
         }); /* datatable initialization */
