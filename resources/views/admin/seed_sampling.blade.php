@@ -47,17 +47,16 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Sampled by</th>
-                            <th>Lab No.</th>
+                            <th>Sampled&nbspby</th>
+                            <th>Lab&nbspNo.</th>
                             <th>Crop</th>
                             <th>Variety</th>
-                            <th>Lot No.</th>
-                            <th>Date Harvested</th>
+                            <th>Lot&nbspNo.</th>
+                            <th>Date&nbspHarvested</th>
                             <th>Quantity</th>
-                            <th>Physical Purity</th>
+                            <th>Physical&nbspPurity</th>
                             <th>Moisture</th>
                             <th>Germination</th>
-
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -80,7 +79,7 @@
                                 Add new Sampling
                         </h4>
                     </div>
-                    <form id="add_station" method="POST" action="{{ url('/save-record') }}" enctype="multipart/form-data">
+                    <form id="add_station" method="POST" action="{{ url('/admin-seed-save-record') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="modal-body">
                             <div class="row">

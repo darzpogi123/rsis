@@ -56,3 +56,5 @@ Route::get('/admin-get-seed-sampling', 'AdminController@getRecordsData');
 // Seed Sampling
 
 Route::get('/admin-seed-sampling','AdminController@seedSampling');
+Route::post('/admin-seed-save-record','AdminController@saveSeedSampling');
+

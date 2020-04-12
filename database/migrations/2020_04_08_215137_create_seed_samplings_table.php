@@ -23,9 +23,9 @@ class CreateSeedSamplingsTable extends Migration
             $table->string('lot_no', 10)->nullable()->default(null);
             $table->string('weight_of_seed_lot')->nullable()->default(null);
             $table->string('no_of_bags',10);
-            $table->date('date_harvested')->nullable()->default(null);
+            $table->string('date_harvested')->nullable()->default(null);
             $table->string('container')->nullable()->default(null);
-            $table->date('date_of_applciation')->nullable()->default(null);;
+            $table->string('date_of_application')->nullable()->default(null);;
             $table->string('moisture_content')->nullable()->default(null);
             $table->string('physical_purity')->nullable()->default(null);
             $table->string('germination')->nullable()->default(null);
