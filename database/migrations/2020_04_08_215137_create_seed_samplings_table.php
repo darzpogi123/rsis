@@ -41,6 +41,8 @@ class CreateSeedSamplingsTable extends Migration
             $table->string('address')->nullable()->default(null);
             $table->string('purpose')->nullable()->default(null);
             $table->string('remarks')->nullable()->default(null);
+            $table->string('created_by')->nullable()->default(null);
+            $table->string('updated_by')->nullable()->default(null);
             $table->integer('status')->nullable()->default(1)->comment("1=active;0=inactive");
             $table->timestamps();
         });

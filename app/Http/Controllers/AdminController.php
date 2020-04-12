@@ -152,15 +152,13 @@ class AdminController extends Controller
 
     public function editRecord($id)
     {
-        $data['title'] = "Edit Record";
-        $data['records'] = Records::where('id', '=', $id)->get();
-        $data['contact_person'] = ContactPerson::where('record_id', '=', $id)->get();
-        $data['barangays'] = Barangay::all();
-        $data['civil_status'] = CivilStatus::all();
+        $data['title'] = "Edit Seed Sampling";
+        $data['records'] = SeedSampling::where('id', '=', $id)->get();
+
         $data['base_url'] = App::make("url")->to('/');
         $data['prof_pic'] = UserProfile::where('user_id', Auth::user()->id)->select('user_profile_pic')->pluck('user_profile_pic');
 
-        return view('admin.edit_record', $data);
+        return view('admin.edit_seed_sampling', $data);
     }
 
     public function getSeniorContribution()
@@ -442,7 +440,7 @@ class AdminController extends Controller
                 'name_of_company' => $request->name_of_company,
                 'address' => $request->address,
                 'purpose' => $request->purpose,
-                'remarks' => $request->remarks
+                'remarks' => $request->remarksgit
             );
 
             $res = SeedSampling::create($data);
@@ -488,43 +486,5 @@ class AdminController extends Controller
         }
     }
 
-    // public function saveSeedSampling(Request $request){
-    //     $data = array{
-    //         'request_no' => $request->request_no,
-    //         'crop' => $request->crop,
-    //         'variety' => $request->variety,
-    //         'source' => $request->source,
-    //         'lot_no' => $request->lot_no,
-    //         'weight_of_seed_lot' => $request->weight_of_seed_lot,
-    //         'no_of_bags' => $request->no_of_bags,
-    //         'date_harvested' => $request->date_harvested,
-    //         'container' => $request->container,
-    //         'date_of_application' => $request->date_of_application,
-    //         'moisture_content' => $request->moisture_content,
-    //         'physical_purity' => $request->physical_purity,
-    //         'germination' => $request->germination,
-    //         'varietal_purity' => $request->varietal_purity,
-    //         'seed_health' => $request->seed_health,
-    //         'ttc' => $request->ttc,
-    //         'others' => $request->others,
-    //         'fname' => $request->fname,
-    //         'mname' => $request->mname,
-    //         'lname' => $request->lname,
-    //         'ename' => $request->ename,
-    //         'name_of_company' => $request->name_of_company,
-    //         'address' => $request->address,
-    //         'purpose' => $request->purpose,
-    //         'remarks' => $request->remarks,
-    //         'created_by' => Auth::user()->name,
-    //         'updated_by' => isset($request->id) ? Auth::user()->name : NULL,
-    //         'status' => 1
-    //     };
-    //     $res = SeedSampling::updateOrCreate{['id' => $request->id], $data};
 
-    //     if($res){
-    //         return redirect('/admin-seed-sampling')->with('message','success');
-    //     } else {
-    //         return redirect()->back()->with('message','error');
-    //     }
-    // }
 }
