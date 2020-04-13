@@ -137,43 +137,43 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Moisture Content <span style="color:red;">*</span></label>
-                                <input type="text" value="{{ $row->moisture_content }}" name="moisture_content" id="moisture_content" required class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
+                                <input type="text" value="{{ $row->moisture_content }}" name="moisture_content" id="moisture_content"  class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Physical Purity Test <span style="color:red;">*</span></label>
-                                <input type="text" value="{{ $row->physical_purity }}" name="physical_purity" id="physical_purity" required class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
+                                <input type="text" value="{{ $row->physical_purity }}" name="physical_purity" id="physical_purity"  class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Germination Test <span style="color:red;">*</span></label>
-                                <input type="text" value="{{ $row->germination }}"name="germination" id="germination" required class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
+                                <input type="text" value="{{ $row->germination }}"name="germination" id="germination"  class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Varietal Purity Test <span style="color:red;">*</span></label>
-                                <input type="text" value="{{ $row->varietal_purity }}" name="varietal_purity" id="varietal_purity" required class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
+                                <input type="text" value="{{ $row->varietal_purity }}" name="varietal_purity" id="varietal_purity"  class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Seed Health <span style="color:red;">*</span></label>
-                                <input type="text" value="{{ $row->seed_health }}" name="seed_health" id="seed_health" required class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
+                                <input type="text" value="{{ $row->seed_health }}" name="seed_health" id="seed_health"  class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Tetrazolium Test (TTC) <span style="color:red;">*</span></label>
-                                <input type="text" value="{{ $row->ttc }}"name="ttc" id="ttc" required class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
+                                <input type="text" value="{{ $row->ttc }}"name="ttc" id="ttc"  class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Others (please specify) <span style="color:red;">*</span></label>
-                                <input type="text" value="{{ $row->others }}"name="others" id="others" required class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
+                                <input type="text" value="{{ $row->others }}"name="others" id="others"  class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
                             </div>
                         </div>
                     </div>
@@ -189,7 +189,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="">Middlename <span style="color:red;">*</span></label>
-                                    <input type="text" value="{{ $row->mname }}" name="mname" id="mname" required class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
+                                    <input type="text" value="{{ $row->mname }}" name="mname" id="mname"  class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -201,7 +201,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="">Extensionname <span style="color:red;">*</span></label>
-                                    <input type="text" value="{{ $row->ename }}" name="ename" id="ename" required class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
+                                    <input type="text" value="{{ $row->ename }}" name="ename" id="ename"  class="form-control" style="text-transform: capitalize;" placeholder="ex. 895645">
                                 </div>
                             </div>
 

@@ -102,7 +102,7 @@ class AdminController extends Controller
         return Datatables::of($records)
             ->addColumn('fullname', function ($records) {
                 $name = isset($records->ename) ? $records->fname . ' ' . $records->mname . ' ' . $records->lname . ' ' . $records->ename : $records->fname . ' ' . $records->mname . ' ' . $records->lname;
-                return $name;
+                return strtoupper($name);
             })
             ->addColumn('action', function ($records) {
                 return '<a href="' . App::make("url")->to("/admin-edit-record/" . $records->id) . '" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> </a>&nbsp;<a id="btn-view" data-id="' . $records->id . '" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> </a>&nbsp;<a href="#" id="btn-del" data-id="' . $records->id . '" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i> </a>';
@@ -433,14 +433,15 @@ class AdminController extends Controller
                 'germination' => $request->germination,
                 'ttc' => $request->ttc,
                 'others' => $request->others,
-                'fname' => $request->fname,
-                'mname' => $request->mname,
-                'lname' => $request->lname,
-                'ename' => $request->ename,
+                'fname' => strtoupper($request->fname),
+                'mname' => strtoupper($request->mname),
+                'lname' => strtoupper($request->lname),
+                'ename' => strtoupper($request->ename),
                 'name_of_company' => $request->name_of_company,
                 'address' => $request->address,
                 'purpose' => $request->purpose,
-                'remarks' => $request->remarksgit
+                'created_by' => Auth::user()->name,
+                'remarks' => $request->remarks
             );
 
             $res = SeedSampling::create($data);
@@ -466,13 +467,14 @@ class AdminController extends Controller
                 'germination' => $request->germination,
                 'ttc' => $request->ttc,
                 'others' => $request->others,
-                'fname' => $request->fname,
-                'mname' => $request->mname,
-                'lname' => $request->lname,
-                'ename' => $request->ename,
+                'fname' => strtoupper($request->fname),
+                'mname' => strtoupper($request->mname),
+                'lname' => strtoupper($request->lname),
+                'ename' => strtoupper($request->ename),
                 'name_of_company' => $request->name_of_company,
                 'address' => $request->address,
                 'purpose' => $request->purpose,
+                'updated_by' => Auth::user()->name,
                 'remarks' => $request->remarks
             );
 
